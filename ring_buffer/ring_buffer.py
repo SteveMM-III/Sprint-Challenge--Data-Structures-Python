@@ -1,9 +1,23 @@
 class RingBuffer:
     def __init__(self, capacity):
-        pass
+        self.capacity = capacity
+        self.que  = []
+        self.curr = 0
 
     def append(self, item):
-        pass
+        # if not at capacity
+        if len( self.que ) < self.capacity:
+            self.que.append( item )
+        # capacity reached
+        else:
+            self.que[ self.curr ] = item
+        
+        # increase current
+        self.curr += 1
+
+        # verify current not out of bounds
+        if self.curr > self.capacity - 1:
+            self.curr = 0
 
     def get(self):
-        pass
+        return self.que
