@@ -32,6 +32,7 @@ for name_2 in names_2:
         duplicates.append( name_2 )
 '''
 
+# set intersection https://www.programiz.com/python-programming/set
 duplicates = set( names_1 ) & set( names_2 )
 
 end_time = time.time()
