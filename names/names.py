@@ -21,17 +21,24 @@ for name_1 in names_1:
             duplicates.append(name_1)
 """
 
-'''
-tree = BSTNode( names_1[ 0 ] )
 
+tree = BSTNode( names_1[ 0 ] )
+'''
 for name_1 in names_1[ 1: ]:
     tree.insert( name_1 )
 
+
+for i in range( 1, len( names_1 ) ):
+    tree.insert( names_1[ i ] )
+
+tree.in_order_print()
+
+
 for name_2 in names_2:
+    #print( name_2 )
     if tree.contains( name_2 ):
         duplicates.append( name_2 )
 '''
-
 # set intersection https://www.programiz.com/python-programming/set
 duplicates = set( names_1 ) & set( names_2 )
 

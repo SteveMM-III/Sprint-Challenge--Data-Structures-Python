@@ -16,7 +16,7 @@ class RingBuffer:
         self.curr += 1
 
         # verify current not out of bounds
-        if self.curr > self.capacity - 1:
+        if self.curr is self.capacity:
             self.curr = 0
 
     def get(self):
