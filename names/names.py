@@ -21,9 +21,9 @@ for name_1 in names_1:
             duplicates.append(name_1)
 """
 
-
-tree = BSTNode( names_1[ 0 ] )
 '''
+tree = BSTNode( names_1[ 0 ] )
+
 for name_1 in names_1[ 1: ]:
     tree.insert( name_1 )
 
